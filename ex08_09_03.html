@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introdução à Programação - Exercício 02</title>
+</head>
+<body>
+  <h1>Exercício 2</h1>
+  <p>PESQUISA SOBRE GÊNERO.</p>
+
+  <form id="form">
+    <input id="field1" type="text" placeholder="Digite seu nome:"><br>
+    <select id= "field2" required>
+      <option value="">Qual o seu gênero?</option>
+      <option value="feminino">Feminino</option>
+      <option value="masculino">Masculino</option>
+      </select><br>
+    <button>Ir</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function onSubmit(event) {
+      event.preventDefault()
+
+      let name = field1.value
+      let gender = field2.value
+
+      if (gender === 'masculino') {
+    result.innerHTML = `MUITO OBRIGADO ${name}, SEJA BEM VINDO`
+} else  {
+    result.innerHTML = `MUITO OBRIGADA ${name}, SEJA BEM VINDA`
+    
+      }
+
+    }
+    form.addEventListener('submit', onSubmit)
+  </script>
+</body>
+</html>
