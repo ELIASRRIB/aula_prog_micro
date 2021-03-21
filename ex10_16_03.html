@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução à Programação - Exercício 10</title>
+    <body><h1>TABUADA</h1>
+        <form id="form">
+        <input id="field1" type="number" placeholder="DIGITE UM NUMERO:"> <br />
+    <button>Exibir</button><br />
+    </form>
+    <div id='result'></div>
+    </body>
+    </html>
+    <script>
+        function onSubmit(event){
+            event.preventDefault()
+    
+  let num = parseFloat (field1.value)
+  if (isNaN(num) ) {
+        result.innerHTML = '<p>Impossível calcular!</p>'
+        return
+      }
+  result.innerHTML=''
+  
+  for(let count=1; count<=10 ; count++){
+   result.innerHTML +=  num+" x "+count+" = "+
+               num*count+"<br />"
+  }
+
+ 
+}
+form.addEventListener('submit', onSubmit)
+
+</script>
